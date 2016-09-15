@@ -1,5 +1,7 @@
 package model;
 
+import java.text.DecimalFormat;
+
 public class ItemDeVenda {
 	
 	private int quantidade;
@@ -29,6 +31,18 @@ public class ItemDeVenda {
 
 	public void setProduto(Produto produto) {
 		this.produto = produto;
+	}
+
+	public double calculaSubtotal(){
+		double subtotal = produto.getValorVenda() * getQuantidade();
+		DecimalFormat f = new DecimalFormat("#0.00");
+		f.format(Double.valueOf(subtotal));
+		return subtotal;
+	}
+	
+	public String mostrar(){
+		String mostra = produto.getNome()+"\t"+quantidade+"\t"+calculaSubtotal();
+		return mostra;
 	}
 	
 }

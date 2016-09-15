@@ -6,13 +6,13 @@ public class Vendas {
 	
 	private Cliente cliente;
 	private Date data;
-	private Produto itemDeVenda;
+	private ItemDeVenda itemDeVenda;
 	
 	public Vendas() {
 		super();
 	}
 
-	public Vendas(Cliente cliente, Date data, Produto itemDeVenda) {
+	public Vendas(Cliente cliente, Date data, ItemDeVenda itemDeVenda) {
 		super();
 		this.cliente = cliente;
 		this.data = data;
@@ -35,14 +35,27 @@ public class Vendas {
 		this.data = data;
 	}
 
-	public Produto getItemDeVenda() {
+	public ItemDeVenda getItemDeVenda() {
 		return itemDeVenda;
 	}
 
-	public void setItemDeVenda(Produto itemDeVenda) {
+	public void setItemDeVenda(ItemDeVenda itemDeVenda) {
 		this.itemDeVenda = itemDeVenda;
 	}
 	
-	
+	public String emitirNotaFiscal(){
+		String nota = "************\n"
+				+ "Nota fiscal"
+				+ "\n*Nome da farmácia*"
+				+ "\nCNPJ:*CNPJ da farmácia*"
+				+ "\n**********"
+				+ "\nData:" + getData()
+				+ "\nCliente: " + cliente.getNome()
+				+ "\n**********"
+				+ "\nNome\tQnt.\tSubtotal"
+				+ "\n"+itemDeVenda.mostrar();
+		
+		return nota;
+	}
 
 }

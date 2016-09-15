@@ -124,6 +124,16 @@ public class Funcionario extends Usuario {
 
 	@Override
 	public void mostrar(){
+		System.out.println("Dados do funcionário:");
+		System.out.println("Matrícula: "+this.getMatricula());
+		System.out.println("Nome: "+this.getNome());
+		System.out.println("Nascimento: "+this.getNascimento());
+		System.out.println("Sexo: "+this.getSexo());
+		System.out.println("CPF: "+this.getCpf());
+		System.out.println("RG: "+this.getRg());
+		System.out.println("E-mail: "+this.getEmail());
+		System.out.println("Telefone: "+this.getTelefone());
+		System.out.println("Salario fixo: "+this.getSalario());
 		
 	}
 	

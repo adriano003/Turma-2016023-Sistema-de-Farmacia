@@ -144,9 +144,6 @@ public class Cliente {
 				+ "]";
 	}
 
-	public void mostrar(){
-		
-	}
 	
 	
 

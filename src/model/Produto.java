@@ -114,5 +114,8 @@ public class Produto {
 		this.vencimento = vencimento;
 	}
 	
+	public void venderProduto(){
+		
+	}
 
 }
