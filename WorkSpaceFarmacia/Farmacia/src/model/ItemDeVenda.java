@@ -32,7 +32,7 @@ public class ItemDeVenda {
 	public void setProduto(Produto produto) {
 		this.produto = produto;
 	}
-
+	
 	public double calculaSubtotal(){
 		double subtotal = produto.getValorVenda() * getQuantidade();
 		DecimalFormat f = new DecimalFormat("#0.00");
@@ -44,5 +44,4 @@ public class ItemDeVenda {
 		String mostra = produto.getNome()+"\t"+quantidade+"\t"+calculaSubtotal();
 		return mostra;
 	}
-	
 }

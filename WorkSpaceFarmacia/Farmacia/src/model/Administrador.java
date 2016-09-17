@@ -25,14 +25,4 @@ public class Administrador extends Usuario {
 		this.matricula = matricula;
 	}
 
-	@Override
-	
-	public void mostrar(){
-		
-	}
-	
-	
-	
-	
-
 }

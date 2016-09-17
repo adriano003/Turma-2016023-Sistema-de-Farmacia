@@ -93,7 +93,4 @@ public class PedidoFornecedor {
 	public void setLote(String lote) {
 		this.lote = lote;
 	}
-	
-	
-
 }

@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Date;
-
 public class Funcionario extends Usuario {
 	
 	private int matricula;
@@ -11,21 +9,15 @@ public class Funcionario extends Usuario {
 	private String sexo;
 	private String cpf;
 	private String rg;
-	private Date nascimento;
+	private String nascimento;
 	private double salario;
-	private Endereco endereco;
 	
 	public Funcionario() {
 		super();
 	}
 	
-	public Funcionario(String login, String senha, int tipo, String descricao) {
-		super(login, senha, tipo, descricao);
-	}
-
 	public Funcionario(String login, String senha, int tipo, String descricao, int matricula, String nome,
-			String telefone, String email, String sexo, String cpf, String rg, Date nascimento, double salario,
-			Endereco endereco) {
+			String telefone, String email, String sexo, String cpf, String rg, String nascimento, double salario) {
 		super(login, senha, tipo, descricao);
 		this.matricula = matricula;
 		this.nome = nome;
@@ -36,12 +28,8 @@ public class Funcionario extends Usuario {
 		this.rg = rg;
 		this.nascimento = nascimento;
 		this.salario = salario;
-		this.endereco = endereco;
 	}
-	
-	
-	
-	
+
 	public int getMatricula() {
 		return matricula;
 	}
@@ -98,11 +86,11 @@ public class Funcionario extends Usuario {
 		this.rg = rg;
 	}
 
-	public Date getNascimento() {
+	public String getNascimento() {
 		return nascimento;
 	}
 
-	public void setNascimento(Date nascimento) {
+	public void setNascimento(String nascimento) {
 		this.nascimento = nascimento;
 	}
 
@@ -113,16 +101,7 @@ public class Funcionario extends Usuario {
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
-
-	public Endereco getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
-	}
-
-	@Override
+	
 	public void mostrar(){
 		System.out.println("Dados do funcionário:");
 		System.out.println("Matrícula: "+this.getMatricula());
@@ -134,8 +113,5 @@ public class Funcionario extends Usuario {
 		System.out.println("E-mail: "+this.getEmail());
 		System.out.println("Telefone: "+this.getTelefone());
 		System.out.println("Salario fixo: "+this.getSalario());
-		
 	}
-	
-
 }

@@ -81,8 +81,5 @@ public class Endereco {
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
-	
-	
-	
 
 }

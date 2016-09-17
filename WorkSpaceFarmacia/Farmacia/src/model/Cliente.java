@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Date;
-
 public class Cliente {
 	
 	private int codigoCliente;
@@ -12,7 +10,7 @@ public class Cliente {
 	private String cpf;
 	private String rg;
 	private String situacao;
-	private Date nascimento;
+	private String nascimento;// Fazer a conversão para data
 	private double valorPago;
 	private double valorAPagar;
 	private Endereco endereco;
@@ -22,7 +20,7 @@ public class Cliente {
 	}
 
 	public Cliente(int codigoCliente, String nome, String telefone, String email, String sexo, String cpf, String rg,
-			String situacao, Date nascimento, double valorPago, double valorAPagar, Endereco endereco) {
+			String situacao, String nascimento, double valorPago, double valorAPagar, Endereco endereco) {
 		super();
 		this.codigoCliente = codigoCliente;
 		this.nome = nome;
@@ -36,6 +34,18 @@ public class Cliente {
 		this.valorPago = valorPago;
 		this.valorAPagar = valorAPagar;
 		this.endereco = endereco;
+	}
+
+	public Cliente(String nome, String telefone, String email, String sexo, String cpf, String rg,
+			String situacao, String nascimento) {
+		this.nome = nome;
+		this.telefone = telefone;
+		this.email = email;
+		this.sexo = sexo;
+		this.cpf = cpf;
+		this.rg = rg;
+		this.situacao = situacao;
+		this.nascimento = nascimento;
 	}
 
 	public int getCodigoCliente() {
@@ -102,11 +112,11 @@ public class Cliente {
 		this.situacao = situacao;
 	}
 
-	public Date getNascimento() {
+	public String getNascimento() {
 		return nascimento;
 	}
 
-	public void setNascimento(Date nascimento) {
+	public void setNascimento(String nascimento) {
 		this.nascimento = nascimento;
 	}
 
@@ -133,8 +143,6 @@ public class Cliente {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	
-	
 
 	@Override
 	public String toString() {
@@ -144,7 +152,8 @@ public class Cliente {
 				+ "]";
 	}
 
+	public void mostrar(){
+		
+	}
 	
-	
-
 }

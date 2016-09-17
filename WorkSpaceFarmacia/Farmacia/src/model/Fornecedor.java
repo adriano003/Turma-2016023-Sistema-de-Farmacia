@@ -7,20 +7,26 @@ public class Fornecedor {
 	private String cnpj;
 	private String telefone;
 	private String email;
-	private Produto produto;
 	
 	public Fornecedor(){
 		super();
 	}
 
-	public Fornecedor(int codigoFornecedor, String nome, String cnpj, String telefone, String email, Produto produto) {
+	public Fornecedor(int codigoFornecedor, String nome, String cnpj, String telefone, String email) {
 		super();
 		this.codigoFornecedor = codigoFornecedor;
 		this.nome = nome;
 		this.cnpj = cnpj;
 		this.telefone = telefone;
 		this.email = email;
-		this.produto = produto;
+	}
+
+	public Fornecedor(String nome, String cnpj, String telefone, String email) {
+		super();
+		this.nome = nome;
+		this.cnpj = cnpj;
+		this.telefone = telefone;
+		this.email = email;
 	}
 
 	public int getCodigoFornecedor() {
@@ -62,23 +68,10 @@ public class Fornecedor {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public Produto getProduto() {
-		return produto;
-	}
-
-	public void setProduto(Produto produto) {
-		this.produto = produto;
-	}
-
-	@Override
-	public String toString() {
+	
+	public String mostrar() {
 		return "Fornecedor [codigoFornecedor=" + codigoFornecedor + ", nome=" + nome + ", cnpj=" + cnpj + ", telefone="
-				+ telefone + ", email=" + email + ", produto=" + produto + "]";
+				+ telefone + ", email=" + email + "]";
 	}
 	
-	public void mostrar(){
-		
-	}
-
 }

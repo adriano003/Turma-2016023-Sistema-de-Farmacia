@@ -51,6 +51,5 @@ public abstract class Usuario {
 		this.descricao = descricao;
 	}
 	
-	public abstract void mostrar();
-
+	//public abstract void mostrar();
 }

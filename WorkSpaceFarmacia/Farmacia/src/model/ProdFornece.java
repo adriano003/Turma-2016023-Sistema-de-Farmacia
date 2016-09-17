@@ -30,7 +30,4 @@ public class ProdFornece {
 	public void setCodigoFornecedor(int codigoFornecedor) {
 		this.codigoFornecedor = codigoFornecedor;
 	}
-	
-	
-
 }
