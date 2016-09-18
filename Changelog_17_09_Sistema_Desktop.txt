@@ -1,8 +1,0 @@
-Alterações 17/09 - por Bruno Lima
-. Algumas classes dao estão prontas
-. Classe com atributo do tipo Date foram substituídas por String
-. Obs: Mudança temporária
-. Criada a parte de conexão ao bd
-. Obs: Classes Configurador, Conexão e arquivo config.ini
-. Criada a pasta recourses. Nessa pasta colocaremos os jars externos,
-. como o driver do mysql, por exemplo.
