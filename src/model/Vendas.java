@@ -1,22 +1,23 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Vendas {
 	
 	private Cliente cliente;
 	private Date data;
-	private ItemDeVenda itemDeVenda;
+	private List<ItemDeVenda> itemDeVenda = new ArrayList<ItemDeVenda>();
 	
 	public Vendas() {
 		super();
 	}
 
-	public Vendas(Cliente cliente, Date data, ItemDeVenda itemDeVenda) {
+	public Vendas(Cliente cliente, Date data) {
 		super();
 		this.cliente = cliente;
 		this.data = data;
-		this.itemDeVenda = itemDeVenda;
 	}
 
 	public Cliente getCliente() {
@@ -34,13 +35,17 @@ public class Vendas {
 	public void setData(Date data) {
 		this.data = data;
 	}
-
-	public ItemDeVenda getItemDeVenda() {
+	
+	public List<ItemDeVenda> getItemDeVenda() {
 		return itemDeVenda;
 	}
-
-	public void setItemDeVenda(ItemDeVenda itemDeVenda) {
-		this.itemDeVenda = itemDeVenda;
+	
+	public boolean inserirItem(ItemDeVenda item){
+		return itemDeVenda.add(item);
+	}
+	
+	public boolean removerItem(ItemDeVenda item){
+		return itemDeVenda.remove(item);
 	}
 	
 	public String emitirNotaFiscal(){
@@ -52,8 +57,12 @@ public class Vendas {
 				+ "\nData:" + getData()
 				+ "\nCliente: " + cliente.getNome()
 				+ "\n**********"
-				+ "\nNome\tQnt.\tSubtotal"
-				+ "\n"+itemDeVenda.mostrar();
+				+ "\nNome\tQnt.\tSubtotal\n";
+		for (ItemDeVenda item: itemDeVenda){
+			nota += item.mostrar()+"\n";
+		}
+		
+		nota += "**********";
 		
 		return nota;
 	}
